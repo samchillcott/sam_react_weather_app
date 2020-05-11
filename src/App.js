@@ -11,11 +11,12 @@ const App = () => {
 
 	const getWeather = async () => {
 		const response = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}`
+			`https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`
+			// `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}`
 		);
 		const data = await response.json();
-		setWeather(data.hits);
-		console.log(data.hits);
+		setWeather(data);
+		console.log(data);
 	};
 
 	useEffect(() => {
@@ -49,7 +50,16 @@ const App = () => {
 				</button>
 			</form>
 			<div className="weather">
-				<Weather />
+        {weather.map}
+				<Weather 
+          // key={key}
+          // city={city}
+          // temp={temp}
+          // feel={feel}
+          // cloud={cloud}
+          // sunrise={sunrise}
+          // sunset={sunset}
+        />
 			</div>
 		</div>
 	);
