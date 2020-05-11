@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./weather.module.css";
 
-const weather = () => {
+const Weather = () => {
 	return (
 		<div className={style.weather}>
 			<p>Weather Component Text</p>
@@ -9,4 +9,4 @@ const weather = () => {
 	);
 };
 
-export default weather;
+export default Weather;

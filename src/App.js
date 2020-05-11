@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import weather from "./weather";
+import Weather from "./weather";
 import "./App.css";
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<h1 className="title">Weather App</h1>
-      <form onSubmit={getSearch} className="search-form">
+			<form onSubmit={getSearch} className="search-form">
 				<input
 					className="search-bar"
 					type="text"
@@ -48,10 +48,10 @@ const App = () => {
 					Search
 				</button>
 			</form>
-      <div className="weather">
-			  {/* {<weather />} */}
-		  </div>
-    </div>  
+			<div className="weather">
+				<Weather />
+			</div>
+		</div>
 	);
 };
 export default App;
