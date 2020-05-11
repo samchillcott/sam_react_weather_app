@@ -6,7 +6,7 @@ const Weather = ({ city, code, temp, feel, cloud, sunrise, sunset }) => {
 		<div className={style.weather}>
             <p>Current Weather For {city}, {code} </p>
             <ul>
-                <li>Temperature {temp} Celsuis</li>
+                <li>Temperature {temp} Celsius</li>
                 <li>Feels like {feel} Celsius</li>
                 <li>Cloudiness {cloud} %</li>
                 <li>Sunrise {sunrise}</li>
