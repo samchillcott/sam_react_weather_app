@@ -9,9 +9,11 @@ const App = () => {
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState("");
 
+	const exampleReq = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`;
+
 	const getWeather = async () => {
 		const response = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`
+			exampleReq
 			// `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}`
 		);
 		const data = await response.json();
@@ -50,16 +52,16 @@ const App = () => {
 				</button>
 			</form>
 			<div className="weather">
-        {weather.map}
-				<Weather 
-          // key={key}
-          // city={city}
-          // temp={temp}
-          // feel={feel}
-          // cloud={cloud}
-          // sunrise={sunrise}
-          // sunset={sunset}
-        />
+				<Weather
+					key={weather.cod}
+					city={weather.name}
+					code={weather.country}
+					temp={weather.cod}
+					feel={weather.feels_like}
+					cloud={weather.temp}
+					sunrise={weather.sunrise}
+					sunset={weather.sunset}
+				/>
 			</div>
 		</div>
 	);
