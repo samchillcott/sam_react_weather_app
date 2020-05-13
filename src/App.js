@@ -53,10 +53,10 @@ const App = () => {
 			</form>
 			<div className="weather">
 				<Weather
-					key={weather.cod}
+					key={weather.id}
 					city={weather.name}
 					code={weather.country}
-					temp={weather.cod}
+					temp={weather.temp}
 					feel={weather.feels_like}
 					cloud={weather.temp}
 					sunrise={weather.sunrise}
