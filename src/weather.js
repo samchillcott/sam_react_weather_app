@@ -2,18 +2,6 @@ import React from "react";
 import style from "./weather.module.css";
 
 const Weather = ({ city, code, temp, feel, cloud, sunrise, sunset }) => {
-	// const dateObj = new Date({ sunrise } * 1000);
-	// const hours = dateObj.getUTCHours();
-	// console.log(hours);
-	// const minutes = dateObj.getUTCMinutes();
-	// const sunriseTime = `${hours}:${minutes}`;
-	// console.log(sunriseTime);
-
-	// const unixTimestamp = { sunrise };
-	// const milliseconds = unixTimestamp * 1000;
-	// const dateObject = new Date(milliseconds);
-	// const humanDateFormat = dateObject.toLocaleString();
-
 	// convert unix to sunrise
 	const dateObj = new Date(sunrise * 1000);
 	const utcString = dateObj.toUTCString();
