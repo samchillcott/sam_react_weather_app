@@ -51,18 +51,22 @@ const App = () => {
 					Search
 				</button>
 			</form>
-			<div className="weather">
-				<Weather
-					key={weather.id}
-					city={weather.name}
-					code={weather.country}
-					temp={weather.temp}
-					feel={weather.feels_like}
-					cloud={weather.temp}
-					sunrise={weather.sunrise}
-					sunset={weather.sunset}
-				/>
-			</div>
+			{typeof weather.main != "undefined" ? (
+				<div className="weather">
+					<Weather
+						key={weather.id}
+						city={weather.name}
+						code={weather.sys.country}
+						temp={weather.main.temp}
+						feel={weather.main.feels_like}
+						cloud={weather.clouds.all}
+						sunrise={weather.sys.sunrise}
+						sunset={weather.sys.sunset}
+					/>
+				</div>
+			) : (
+				[""]
+			)}
 		</div>
 	);
 };
