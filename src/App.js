@@ -9,7 +9,7 @@ const App = () => {
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState("");
 
-	const exampleReq = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`;
+	// const exampleReq = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`;
 
 	const getWeather = async () => {
 		const response = await fetch(
