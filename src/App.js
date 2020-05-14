@@ -9,24 +9,29 @@ const App = () => {
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState("");
 
-	// const exampleReq = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`;
-
 	const getWeather = async () => {
-		try {
+		// try {
+		// if query isn't an apmty string then we reun the code for getWeather()
+		console.log(query !== "");
+		debugger;
+		if (query !== "") {
 			const response = await fetch(
-				// exampleReq
 				`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_KEY}`
 			);
 			if (response.ok) {
 				const data = await response.json();
 				setWeather(data);
 				console.log(data);
+			} else {
+				alert("Check your spelling for your city");
 			}
-			// throw new Error("Request failed");
-		} catch (error) {
-			console.log(error);
-			alert(error);
+			// if the query is an empty strng then we dont run the code
 		}
+		// throw new Error("Request failed");
+		// } catch (error) {
+		// 	console.log(error);
+		// 	alert(error);
+		// }
 	};
 
 	useEffect(() => {
