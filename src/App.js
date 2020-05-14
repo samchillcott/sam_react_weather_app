@@ -12,13 +12,21 @@ const App = () => {
 	// const exampleReq = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${API_KEY}`;
 
 	const getWeather = async () => {
-		const response = await fetch(
-			// exampleReq
-			`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_KEY}`
-		);
-		const data = await response.json();
-		setWeather(data);
-		console.log(data);
+		try {
+			const response = await fetch(
+				// exampleReq
+				`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_KEY}`
+			);
+			if (response.ok) {
+				const data = await response.json();
+				setWeather(data);
+				console.log(data);
+			}
+			// throw new Error("Request failed");
+		} catch (error) {
+			console.log(error);
+			alert(error);
+		}
 	};
 
 	useEffect(() => {
