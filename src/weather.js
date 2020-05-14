@@ -21,8 +21,8 @@ const Weather = ({ city, code, temp, feel, cloud, sunrise, sunset }) => {
 				<li>Temperature {temp}°c</li>
 				<li>Feels like {feel}°c</li>
 				<li>Cloudiness {cloud}%</li>
-				<li>Sunrise {sunriseTime}</li>
-				<li>Sunset {sunsetTime}</li>
+				<li>Sunrise {sunriseTime} AM</li>
+				<li>Sunset {sunsetTime} PM</li>
 			</ul>
 		</div>
 	);
