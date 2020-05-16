@@ -18,8 +18,12 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* background-color: aqua; */
-	background-image: url("/images/defaultbg.jpg") no-repeat;
+	background: url("images/defaultbg.jpg");
+	background-size: cover;
 	flex-direction: column;
 	height: 100vh;
+}
+
+.search-form {
+	margin: 5px;
 }
