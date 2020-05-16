@@ -24,7 +24,7 @@ const App = () => {
 			} else {
 				alert("Check your spelling for your city");
 			}
-			// if the query is an empty strng then we dont run the code
+			// if the query is an empty string then we don't run the code
 		}
 		// throw new Error("Request failed");
 		// } catch (error) {

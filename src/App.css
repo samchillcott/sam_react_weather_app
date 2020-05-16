@@ -16,10 +16,10 @@ a {
 
 .App {
 	display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: aqua;
-  background: #ffffff url("./public/images/jack.jpg") no-repeat right top;  
-  flex-direction: column;
-  height: 100vh;
+	justify-content: center;
+	align-items: center;
+	/* background-color: aqua; */
+	background-image: url("/public/images/defaultbg.jpg") no-repeat;
+	flex-direction: column;
+	height: 100vh;
 }
