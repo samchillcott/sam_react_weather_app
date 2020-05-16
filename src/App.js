@@ -11,7 +11,7 @@ const App = () => {
 
 	const getWeather = async () => {
 		// try {
-		// if query isn't an apmty string then we reun the code for getWeather()
+		// if query isn't an empty string then we run the code for getWeather()
 		console.log(query !== "");
 		if (query !== "") {
 			const response = await fetch(

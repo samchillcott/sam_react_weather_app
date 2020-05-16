@@ -1,17 +1,24 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-
-body{
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  line-height: 1.4;
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 1.4;
 }
-
 
 a {
-  color: 333;
-  text-decoration: none;
+	color: 333;
+	text-decoration: none;
+}
+
+.App {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  flex-direction: column;
+  height: 100vh;
 }
