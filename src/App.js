@@ -48,6 +48,15 @@ const App = () => {
 		setSearch("");
 	};
 
+	// set background conditionals
+	// if cloudiness is below 50% and temperature above 20*C set to sunny bg
+
+	const setBackground = () => {
+		if (weather.clouds.all < 50) {
+			
+		}
+	}
+
 	return (
 		<div className="App">
 			<h1 className="title">Weather App</h1>

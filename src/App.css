@@ -24,6 +24,21 @@ a {
 	height: 100vh;
 }
 
+.background-sun {
+	background: url("images/sunny.jpg");
+	background-size: cover;
+}
+
+background-nosun {
+	background: url("images/non_sunny.jpg");
+	background-size: cover;
+}
+
+background-jack {
+	background: url("images/jack.jpg");
+	background-size: cover;
+}
+
 .search-form {
 	margin: 5px;
 }
