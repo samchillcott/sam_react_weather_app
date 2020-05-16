@@ -19,6 +19,7 @@ a {
   justify-content: center;
   align-items: center;
   background-color: aqua;
+  background: #ffffff url("./public/images/jack.jpg") no-repeat right top;  
   flex-direction: column;
   height: 100vh;
 }
