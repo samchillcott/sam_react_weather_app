@@ -19,7 +19,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	/* background-color: aqua; */
-	background-image: url("/public/images/defaultbg.jpg") no-repeat;
+	background-image: url("/images/defaultbg.jpg") no-repeat;
 	flex-direction: column;
 	height: 100vh;
 }
