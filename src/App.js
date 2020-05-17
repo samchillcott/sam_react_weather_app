@@ -50,15 +50,32 @@ const App = () => {
 
 	// set background conditionals
 	// if cloudiness is below 50% and temperature above 20*C set to sunny bg
+	// if cloudiness is below 50% and temperature below 20*C set to non sunny
+	// if cloudiness is above 50% and temperature below 20*C set to jack
 
-	const setBackground = () => {
-		if (weather.clouds.all < 50) {
-			
-		}
-	}
+	// const setBackground = () => {
+	// 	if (weather.clouds.all < 50 & weather.main.temp >=20) {
+	// 		apply style background-nosun
+	// 	} else if (weather.clouds.all < 50 & weather.main.temp < 20) {
+	// 		apply style background-sun
+	// 	} else if (weather.clouds.all > 50 & weather.main.temp < 20) {
+	// 		apply style background-jack
+	// 	}
 
 	return (
-		<div className="App">
+		<div
+			className={
+				typeof weather.main != "undefined"
+					? (weather.main.temp > 20) & (weather.clouds.all < 50)
+						? "background-sun"
+						: (weather.main.temp < 20) & (weather.clouds.all < 50)
+						? "background-nosun"
+						: (weather.main.temp < 20) & (weather.clouds.all > 50)
+						? "background-jack"
+						: "App"
+					: "App"
+			}
+		>
 			<h1 className="title">Weather App</h1>
 			<form onSubmit={getSearch} className="search-form">
 				<input
