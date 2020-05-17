@@ -25,18 +25,33 @@ a {
 }
 
 .background-sun {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: url("images/sunny.jpg");
 	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
 }
 
 background-nosun {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: url("images/non_sunny.jpg");
 	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
 }
 
 background-jack {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: url("images/jack.jpg");
 	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
 }
 
 .search-form {

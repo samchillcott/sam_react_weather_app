@@ -63,7 +63,15 @@ const App = () => {
 	// 	}
 
 	return (
-		<div
+		<div 
+	// 		{if ((weather.main.temp > 20) & (weather.clouds.all < 50)) {
+	// 			className={"background-sun"}
+	// 		} else { 
+	// 			"App"
+	// 		}
+	// 	}
+	// }
+
 			className={
 				typeof weather.main != "undefined"
 					? (weather.main.temp > 20) & (weather.clouds.all < 50)
