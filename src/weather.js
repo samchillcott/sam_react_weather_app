@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./weather.module.css";
 
-const Weather = ({ city, code, temp, feel, cloud, sunrise, sunset }) => {
+const Weather = ({ city, code, desc, temp, feel, cloud, sunrise, sunset }) => {
 	// convert unix to sunrise
 	const dateObj = new Date(sunrise * 1000);
 	const utcString = dateObj.toUTCString();
@@ -18,6 +18,7 @@ const Weather = ({ city, code, temp, feel, cloud, sunrise, sunset }) => {
 				Current Weather For {city}, {code}
 			</p>
 			<ul>
+				<li>Summary: {desc}</li>
 				<li>Temperature {({ temp } = Math.round(temp))}°c</li>
 				<li>Feels like {({ feel } = Math.round(feel))}°c</li>
 				<li>Cloudiness {cloud}%</li>

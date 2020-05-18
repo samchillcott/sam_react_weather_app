@@ -81,6 +81,7 @@ const App = () => {
 						key={weather.id}
 						city={weather.name}
 						code={weather.sys.country}
+						desc={weather.weather[0].description}
 						temp={weather.main.temp}
 						feel={weather.main.feels_like}
 						cloud={weather.clouds.all}
