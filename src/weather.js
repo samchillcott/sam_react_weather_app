@@ -18,8 +18,8 @@ const Weather = ({ city, code, temp, feel, cloud, sunrise, sunset }) => {
 				Current Weather For {city}, {code}
 			</p>
 			<ul>
-				<li>Temperature {temp}°c</li>
-				<li>Feels like {feel}°c</li>
+				<li>Temperature {({ temp } = Math.round(temp))}°c</li>
+				<li>Feels like {({ feel } = Math.round(feel))}°c</li>
 				<li>Cloudiness {cloud}%</li>
 				<li>Sunrise {sunriseTime} AM</li>
 				<li>Sunset {sunsetTime} PM</li>
