@@ -20,8 +20,13 @@ a {
 	align-items: center;
 	background: url("images/defaultbg.jpg");
 	background-size: cover;
+	background-position: center;
 	flex-direction: column;
 	height: 100vh;
+}
+
+.App>ul {
+	list-style: none;
 }
 
 .background-sun {
@@ -33,6 +38,7 @@ a {
 	background-size: cover;
 	flex-direction: column;
 	height: 100vh;
+	list-style: none;
 }
 
 .background-nosun {

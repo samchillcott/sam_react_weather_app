@@ -10,27 +10,27 @@ const App = () => {
 	const [query, setQuery] = useState("");
 
 	const getWeather = async () => {
-		// try {
-		// if query isn't an empty string then we run the code for getWeather()
-		console.log(query !== "");
-		if (query !== "") {
-			const response = await fetch(
-				`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_KEY}`
-			);
-			if (response.ok) {
-				const data = await response.json();
-				setWeather(data);
-				console.log(data);
-			} else {
-				alert("Check your spelling for your city");
+		try {
+			// if query isn't an empty string then we run the code for getWeather()
+			console.log(query !== "");
+			if (query !== "") {
+				const response = await fetch(
+					`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_KEY}`
+				);
+				if (response.ok) {
+					const data = await response.json();
+					setWeather(data);
+					console.log(data);
+				} else {
+					alert("City not in database / Check your spelling");
+				}
+				// if the query is an empty string then we don't run the code
 			}
-			// if the query is an empty string then we don't run the code
+			// throw new Error("Request failed");
+		} catch (error) {
+			console.log(error);
+			alert(error);
 		}
-		// throw new Error("Request failed");
-		// } catch (error) {
-		// 	console.log(error);
-		// 	alert(error);
-		// }
 	};
 
 	useEffect(() => {
@@ -48,30 +48,8 @@ const App = () => {
 		setSearch("");
 	};
 
-	// set background conditionals
-	// if cloudiness is below 50% and temperature above 20*C set to sunny bg
-	// if cloudiness is below 50% and temperature below 20*C set to non sunny
-	// if cloudiness is above 50% and temperature below 20*C set to jack
-
-	// const setBackground = () => {
-	// 	if (weather.clouds.all < 50 & weather.main.temp >=20) {
-	// 		apply style background-nosun
-	// 	} else if (weather.clouds.all < 50 & weather.main.temp < 20) {
-	// 		apply style background-sun
-	// 	} else if (weather.clouds.all > 50 & weather.main.temp < 20) {
-	// 		apply style background-jack
-	// 	}
-
 	return (
-		<div 
-	// 		{if ((weather.main.temp > 20) & (weather.clouds.all < 50)) {
-	// 			className={"background-sun"}
-	// 		} else { 
-	// 			"App"
-	// 		}
-	// 	}
-	// }
-
+		<div
 			className={
 				typeof weather.main != "undefined"
 					? (weather.main.temp > 20) & (weather.clouds.all < 50)
