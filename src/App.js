@@ -9,8 +9,6 @@ const App = () => {
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState("");
 
-	const voy = "topless"
-
 	const getWeather = async () => {
 		try {
 			// if query isn't an empty string then we run the code for getWeather()
