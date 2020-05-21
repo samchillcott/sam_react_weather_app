@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Weather from "./weather";
 import "./App.css";
-import countries from "./countries";
 
 const App = () => {
 	const API_KEY = "e55f6512fa859d8ffa450609930032ad";
