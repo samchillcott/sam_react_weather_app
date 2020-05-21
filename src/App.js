@@ -39,6 +39,7 @@ const App = () => {
 	}, [query]);
 
 	const updateSearch = (e) => {
+		// console.log("repeat");
 		setSearch(e.target.value);
 	};
 
@@ -49,6 +50,7 @@ const App = () => {
 	};
 
 	return (
+
 		<div
 			className={
 				typeof weather.main != "undefined"
@@ -62,6 +64,8 @@ const App = () => {
 					: "App"
 			}
 		>
+		{console.log("grrr")}
+
 			<h1 className="title">Weather App</h1>
 			<form onSubmit={getSearch} className="search-form">
 				<input

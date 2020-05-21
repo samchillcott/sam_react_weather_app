@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./weather.module.css";
-import isoCountries from "./countries";
-
+import isoCountries from "./countries.js";
 
 const Weather = ({ city, code, desc, temp, feel, cloud, sunrise, sunset }) => {
 	// convert unix to sunrise
@@ -16,10 +15,14 @@ const Weather = ({ city, code, desc, temp, feel, cloud, sunrise, sunset }) => {
 
 	// Convert country code to country name
 
-	convertCountryCode = (code) => {
-		const country = isoCountries[code].name;
-	}
-	
+	const countryName = () => {
+		console.log(code);
+		console.log(isoCountries);
+		return isoCountries[code].name;
+	};
+
+	const country = countryName();
+
 	return (
 		<div className={style.weather}>
 			<p>
