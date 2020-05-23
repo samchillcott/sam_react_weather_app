@@ -16,8 +16,6 @@ const Weather = ({ city, code, desc, temp, feel, cloud, sunrise, sunset }) => {
 	// Convert country code to country name
 
 	const countryName = () => {
-		console.log(code);
-		console.log(isoCountries);
 		return isoCountries[code].name;
 	};
 
