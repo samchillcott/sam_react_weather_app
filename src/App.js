@@ -26,10 +26,9 @@ const App = () => {
 				}
 				// if the query is an empty string then we don't run the code
 			}
-			// throw new Error("Request failed");
 		} catch (error) {
 			console.log(error);
-			alert(error);
+			alert("Failed to connect to the API");
 		}
 	};
 
@@ -64,7 +63,6 @@ const App = () => {
 			}
 		>
 			{console.log("grrr")}
-
 			<h1 className="title">Weather App</h1>
 			<form onSubmit={getSearch} className="search-form">
 				<input
