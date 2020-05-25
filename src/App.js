@@ -82,6 +82,7 @@ const App = () => {
 				{typeof weather.main != "undefined" ? (
 					<div className="weather">
 						<Weather
+							icon={weather.weather[0].icon}
 							key={weather.id}
 							city={weather.name}
 							code={weather.sys.country}

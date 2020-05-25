@@ -94,8 +94,13 @@ a {
 .search-bar {
 	/* background-color: blue; */
 	width: 50%;
-	border: none;
-	padding: 10px;
+	border: 1px solid #333232;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5px;
+	font-size: 1rem;
+	color: #333232;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .search-button {

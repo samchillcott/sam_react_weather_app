@@ -2,7 +2,7 @@ import React from "react";
 import style from "./weather.module.css";
 import isoCountries from "./countries.js";
 
-const Weather = ({ city, code, desc, temp, feel, cloud, sunrise, sunset }) => {
+const Weather = ({ city, code, icon, desc, temp, feel, cloud, sunrise, sunset }) => {
 	// convert unix to sunrise
 	const dateObj = new Date(sunrise * 1000);
 	const utcString = dateObj.toUTCString();
@@ -24,8 +24,9 @@ const Weather = ({ city, code, desc, temp, feel, cloud, sunrise, sunset }) => {
 	return (
 		<div className={style.weather}>
 			<p>
-				Current Weather For {city}, {country}
+				{city}, {country}
 			</p>
+			<img src={`http://openweathermap.org/img/w/${icon}.png`} alt=""/>
 			<ul>
 				<li>Summary: {desc}</li>
 				<li>Temperature {({ temp } = Math.round(temp))}°c</li>
