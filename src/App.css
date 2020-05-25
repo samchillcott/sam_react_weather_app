@@ -5,7 +5,7 @@
 }
 
 body {
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.4;
 }
 
@@ -63,6 +63,26 @@ a {
 	height: 100vh;
 }
 
+.wrapper {
+	background-color: antiquewhite;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.header {
+	background-color: darkgrey;
+	align-items: center;
+}
+
 .search-form {
 	margin: 5px;
+	background-color: aqua;
+}
+
+.search-bar {
+	background-color: blue;
+}
+
+.search-button {
+	background-color: cornflowerblue;
 }

@@ -1,5 +1,6 @@
 .weather {
-    /* background-color: aqua; */
+    background-color: aqua;
+    font-family: 'Roboto', sans-serif;
 }
 
 .weather ul {
