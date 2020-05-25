@@ -1,6 +1,8 @@
 .weather {
     background-color: aqua;
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding: 10px;
 }
 
 .weather ul {

@@ -22,7 +22,7 @@ a {
 	background-size: cover;
 	background-position: center;
 	flex-direction: column;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .App>ul {
@@ -64,7 +64,7 @@ a {
 }
 
 .wrapper {
-	background-color: antiquewhite;
+	background: rgba(255,255,255,0.4);
 	border-radius: 5px;
 	padding: 10px;
 }
@@ -74,15 +74,32 @@ a {
 	align-items: center;
 }
 
+.header h1 {
+	display: flex;
+	justify-content: center;
+}
+
 .search-form {
-	margin: 5px;
+	margin: 10px;
 	background-color: aqua;
+	min-height: 10vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .search-bar {
 	background-color: blue;
+	width: 50%;
+	border: none;
+	padding: 10px;
 }
 
 .search-button {
 	background-color: cornflowerblue;
+	border: none;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5px;
+	font-size: 1rem;
 }
