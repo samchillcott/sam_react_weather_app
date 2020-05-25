@@ -33,25 +33,21 @@ const Weather = ({
 
 	return (
 		<div className={style.weather}>
-				<p className={style.summary}>
-					{city}, {country} - {desc}{" "}
-					<img
-						className={style.icon}
-						src={`http://openweathermap.org/img/w/${icon}.png`}
-						alt=""
-					/>
-				</p>
-				<p className={style.temperature}>
-					{" "}
-					{({ temp } = Math.round(temp))}°c
-				</p>
-				<ul className="minor_data">
-					<li>(Feels like {({ feel } = Math.round(feel))}°c)</li>
-					<li>Cloudiness {cloud}%</li>
-					<li>Sunrise {sunriseTime} AM</li>
-					<li>Sunset {sunsetTime} PM</li>
-				</ul>
-			
+			<p className={style.summary}>
+				{city}, {country} - {desc}{" "}
+				<img
+					className={style.icon}
+					src={`http://openweathermap.org/img/w/${icon}.png`}
+					alt=""
+				/>
+			</p>
+			<p className={style.temperature}> {({ temp } = Math.round(temp))}°c</p>
+			<ul className="minor_data">
+				<li>(Feels like {({ feel } = Math.round(feel))}°c)</li>
+				<li>Cloudiness {cloud}%</li>
+				<li>Sunrise {sunriseTime} AM</li>
+				<li>Sunset {sunsetTime} PM</li>
+			</ul>
 		</div>
 	);
 };
