@@ -12,14 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.icon {
-    font-size: 2rem;
-}
-
-i[class^="wi-"], i[class*=" wi-"] {
-    font-size: 200px;
+    text-transform: capitalize;
 }
 
 .temperature {
@@ -33,6 +26,7 @@ i[class^="wi-"], i[class*=" wi-"] {
     display: grid;
     justify-content: center;
     margin: 0px;
+    background-color: chartreuse;
 }
 
 .weather ul {
