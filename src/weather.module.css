@@ -5,6 +5,7 @@
     font-size: 1.2 rem;
     padding: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -22,16 +23,11 @@
     margin: 0px;
 }
 
-.minor_data {
-    display: grid;
-    justify-content: center;
-    margin: 0px;
-    background-color: chartreuse;
-}
-
 .weather ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 100px;
+    line-height: 2;
 }
