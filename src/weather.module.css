@@ -1,7 +1,8 @@
 .weather {
-    background-color: aqua;
-    font-family: 'Roboto', sans-serif;
+    /* background-color: aqua; */
+    font-family: 'Montserrat', sans-serif;    
     font-weight: 700;
+    font-size: 1.2 rem;
     padding: 10px;
 }
 
