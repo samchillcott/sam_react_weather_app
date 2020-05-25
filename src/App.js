@@ -63,36 +63,40 @@ const App = () => {
 			}
 		>
 			{console.log("grrr")}
-			<h1 className="title">Weather App</h1>
-			<form onSubmit={getSearch} className="search-form">
-				<input
-					className="search-bar"
-					type="text"
-					placeholder="City name"
-					value={search}
-					onChange={updateSearch}
-				/>
-				<button className="search-button" type="submit">
-					Search
-				</button>
-			</form>
-			{typeof weather.main != "undefined" ? (
-				<div className="weather">
-					<Weather
-						key={weather.id}
-						city={weather.name}
-						code={weather.sys.country}
-						desc={weather.weather[0].description}
-						temp={weather.main.temp}
-						feel={weather.main.feels_like}
-						cloud={weather.clouds.all}
-						sunrise={weather.sys.sunrise}
-						sunset={weather.sys.sunset}
-					/>
+			<div className="wrapper">
+				<div className="header">
+					<h1 className="title">Weather App</h1>
+					<form onSubmit={getSearch} className="search-form">
+						<input
+							className="search-bar"
+							type="text"
+							placeholder="City name"
+							value={search}
+							onChange={updateSearch}
+						/>
+						<button className="search-button" type="submit">
+							Search
+						</button>
+					</form>
 				</div>
-			) : (
-				[""]
-			)}
+				{typeof weather.main != "undefined" ? (
+					<div className="weather">
+						<Weather
+							key={weather.id}
+							city={weather.name}
+							code={weather.sys.country}
+							desc={weather.weather[0].description}
+							temp={weather.main.temp}
+							feel={weather.main.feels_like}
+							cloud={weather.clouds.all}
+							sunrise={weather.sys.sunrise}
+							sunset={weather.sys.sunset}
+						/>
+					</div>
+				) : (
+					[""]
+				)}
+			</div>
 		</div>
 	);
 };
