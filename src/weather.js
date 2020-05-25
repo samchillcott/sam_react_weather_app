@@ -2,7 +2,17 @@ import React from "react";
 import style from "./weather.module.css";
 import isoCountries from "./countries.js";
 
-const Weather = ({ city, code, icon, desc, temp, feel, cloud, sunrise, sunset }) => {
+const Weather = ({
+	city,
+	code,
+	icon,
+	desc,
+	temp,
+	feel,
+	cloud,
+	sunrise,
+	sunset,
+}) => {
 	// convert unix to sunrise
 	const dateObj = new Date(sunrise * 1000);
 	const utcString = dateObj.toUTCString();
@@ -23,17 +33,26 @@ const Weather = ({ city, code, icon, desc, temp, feel, cloud, sunrise, sunset })
 
 	return (
 		<div className={style.weather}>
-			<p>
-				{city}, {country}
-			</p>
-			<img src={`http://openweathermap.org/img/w/${icon}.png`} alt=""/>
+			<p></p>
 			<ul>
-				<li>Summary: {desc}</li>
-				<li>Temperature {({ temp } = Math.round(temp))}°c</li>
-				<li>Feels like {({ feel } = Math.round(feel))}°c</li>
-				<li>Cloudiness {cloud}%</li>
-				<li>Sunrise {sunriseTime} AM</li>
-				<li>Sunset {sunsetTime} PM</li>
+				<li className={style.summary}>
+					{city}, {country} - {desc}{" "}
+					<img
+						className={style.icon}
+						src={`http://openweathermap.org/img/w/${icon}.png`}
+						alt=""
+					/>
+				</li>
+				<li className={style.temperature}>
+					{" "}
+					{({ temp } = Math.round(temp))}°c
+				</li>
+				<div className="minor_data">
+					<li>(Feels like {({ feel } = Math.round(feel))}°c)</li>
+					<li>Cloudiness {cloud}%</li>
+					<li>Sunrise {sunriseTime} AM</li>
+					<li>Sunset {sunsetTime} PM</li>
+				</div>
 			</ul>
 		</div>
 	);

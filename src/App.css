@@ -68,6 +68,8 @@ a {
 	background: rgba(255, 255, 255, 0.6);
 	border-radius: 5px;
 	padding: 10px;
+	min-width: 400px;
+
 }
 
 .header {
@@ -83,7 +85,7 @@ a {
 }
 
 .search-form {
-	margin: 10px;
+	margin: 0px 10px ;
 	/* background-color: aqua; */
 	min-height: 10vh;
 	display: flex;
