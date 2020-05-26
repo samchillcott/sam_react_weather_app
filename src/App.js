@@ -58,6 +58,8 @@ const App = () => {
 						? "background-nosun"
 						: (weather.main.temp < 20) & (weather.clouds.all > 50)
 						? "background-jack"
+						: (weather.main.temp > 20) & (weather.clouds.all > 50)
+						? "background-sun_clouds"
 						: "App"
 					: "App"
 			}
