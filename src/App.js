@@ -10,13 +10,20 @@ const App = () => {
 	const [query, setQuery] = useState("");
 
 	const getWeather = async () => {
-		try {
-			// if query isn't an empty string then we run the code for getWeather()
-			console.log(query !== "");
-			if (query !== "") {
-				const response = await fetch(
+		// if query isn't an empty string then we run the code for getWeather()
+		console.log(query !== "");
+		if (query !== "") {
+			let response = null;
+			try {
+				response = await fetch(
 					`https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_KEY}`
 				);
+			} catch (error) {
+				console.log(error);
+				alert("Failed to connect to the API");
+			}
+
+			if (response != null) {
 				if (response.ok) {
 					const data = await response.json();
 					setWeather(data);
@@ -24,11 +31,8 @@ const App = () => {
 				} else {
 					alert("City not in database / Check your spelling");
 				}
-				// if the query is an empty string then we don't run the code
 			}
-		} catch (error) {
-			console.log(error);
-			alert("Failed to connect to the API");
+			// if the query is an empty string then we don't run the code
 		}
 	};
 
@@ -48,22 +52,33 @@ const App = () => {
 		setSearch("");
 	};
 
+	// typeof weather.main != "undefined"
+	// 	? (weather.main.temp > 20) & (weather.clouds.all < 50)
+	// 		? "background-sun"
+	// 		: (weather.main.temp < 20) & (weather.clouds.all < 50)
+	// 		? "background-nosun"
+	// 		: (weather.main.temp < 20) & (weather.clouds.all > 50)
+	// 		? "background-jack"
+	// 		: (weather.main.temp > 20) & (weather.clouds.all > 50)
+	// 		? "background-sun_clouds"
+	// 		: "App"
+	// 	: "App";
+
+	let backgroundClass = "App";
+	if (weather.main != undefined) {
+		if ((weather.main.temp > 20) & (weather.clouds.all < 50)) {
+			backgroundClass = "background-sun";
+		} else if ((weather.main.temp < 20) & (weather.clouds.all < 50)) {
+			backgroundClass = "background-nosun";
+		} else if ((weather.main.temp < 20) & (weather.clouds.all > 50)) {
+			backgroundClass = "background-jack";
+		} else if ((weather.main.temp > 20) & (weather.clouds.all > 50)) {
+			backgroundClass = "background-sun_clouds";
+		}
+	}
+
 	return (
-		<div
-			className={
-				typeof weather.main != "undefined"
-					? (weather.main.temp > 20) & (weather.clouds.all < 50)
-						? "background-sun"
-						: (weather.main.temp < 20) & (weather.clouds.all < 50)
-						? "background-nosun"
-						: (weather.main.temp < 20) & (weather.clouds.all > 50)
-						? "background-jack"
-						: (weather.main.temp > 20) & (weather.clouds.all > 50)
-						? "background-sun_clouds"
-						: "App"
-					: "App"
-			}
-		>
+		<div className={backgroundClass}>
 			{console.log("grrr")}
 			<div className="wrapper">
 				<div className="header">
