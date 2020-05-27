@@ -32,7 +32,6 @@ const App = () => {
 					alert("City not in database / Check your spelling");
 				}
 			}
-			// if the query is an empty string then we don't run the code
 		}
 	};
 
