@@ -64,7 +64,7 @@ const App = () => {
 	// 	: "App";
 
 	let backgroundClass = "App";
-	if (weather.main != undefined) {
+	if (weather.main !== undefined) {
 		if ((weather.main.temp > 20) & (weather.clouds.all < 50)) {
 			backgroundClass = "background-sun";
 		} else if ((weather.main.temp < 20) & (weather.clouds.all < 50)) {
