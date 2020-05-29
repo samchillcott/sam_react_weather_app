@@ -13,7 +13,7 @@ const Weather = ({
 	sunrise,
 	sunset,
 }) => {
-	// convert unix to sunrise
+	// convert unix to sunrise time
 	const dateObj = new Date(sunrise * 1000);
 	// console.log(dateObj);
 	const utcString = dateObj.toUTCString();
