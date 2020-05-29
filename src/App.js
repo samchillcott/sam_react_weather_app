@@ -11,7 +11,7 @@ const App = () => {
 
 	const getWeather = async () => {
 		// if query isn't an empty string then we run the code for getWeather()
-		console.log(query !== "");
+		// console.log(query !== "");
 		if (query !== "") {
 			let response = null;
 			try {
@@ -41,7 +41,6 @@ const App = () => {
 	}, [query]);
 
 	const updateSearch = (e) => {
-		// console.log("repeat");
 		setSearch(e.target.value);
 	};
 
@@ -49,6 +48,7 @@ const App = () => {
 		e.preventDefault();
 		setQuery(search);
 		setSearch("");
+		console.log("get search");
 	};
 
 	let backgroundClass = "App";
@@ -66,7 +66,7 @@ const App = () => {
 
 	return (
 		<div className={backgroundClass}>
-			{console.log("grrr")}
+			{console.log("App render")}
 			<div className="wrapper">
 				<div className="header">
 					<h1 className="title">Weather App</h1>
