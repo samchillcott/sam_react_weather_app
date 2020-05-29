@@ -51,18 +51,6 @@ const App = () => {
 		setSearch("");
 	};
 
-	// typeof weather.main != "undefined"
-	// 	? (weather.main.temp > 20) & (weather.clouds.all < 50)
-	// 		? "background-sun"
-	// 		: (weather.main.temp < 20) & (weather.clouds.all < 50)
-	// 		? "background-nosun"
-	// 		: (weather.main.temp < 20) & (weather.clouds.all > 50)
-	// 		? "background-jack"
-	// 		: (weather.main.temp > 20) & (weather.clouds.all > 50)
-	// 		? "background-sun_clouds"
-	// 		: "App"
-	// 	: "App";
-
 	let backgroundClass = "App";
 	if (weather.main !== undefined) {
 		if ((weather.main.temp > 20) & (weather.clouds.all < 50)) {
