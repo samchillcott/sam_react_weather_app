@@ -36,7 +36,7 @@ const Weather = ({
 
 	return (
 		<div className={style.weather}>
-					{console.log("weather comp render")};
+					{console.log("weather comp render")}
 
 			<p className={style.summary}>
 				{city}, {country} - {desc}{" "}
