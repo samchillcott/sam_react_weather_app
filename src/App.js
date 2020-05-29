@@ -46,9 +46,9 @@ const App = () => {
 
 	const getSearch = (e) => {
 		e.preventDefault();
-		console.log(search);
-		setSearch(e.target.value)		
-		console.log(search);
+		// console.log(search);
+		// setSearch(e.target.value)		
+		// console.log(search);
 		setQuery(search);
 		setSearch("");
 		console.log("get search called");
@@ -78,7 +78,7 @@ const App = () => {
 							className="search-bar"
 							type="text"
 							placeholder="City name"
-							// value={search}
+							value={search}
 							onChange={updateSearch}
 						/>
 						<button className="search-button" type="submit">
