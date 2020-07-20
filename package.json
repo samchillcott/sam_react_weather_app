@@ -18,6 +18,9 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/samchillcott/sam_react_weather_app.git"
