@@ -1,0 +1,133 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.4;
+	color: #333232;
+}
+
+a {
+	color: 333;
+	text-decoration: none;
+}
+
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background: url("images/defaultbg.jpg"); */
+	background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);	background-size: cover;
+	background-position: center;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.App > ul {
+	list-style: none;
+}
+
+.background-sun {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("images/sunny.jpg");
+	background-position: center;
+	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
+	list-style: none;
+}
+
+.background-nosun {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("images/non_sunny.jpg");
+	background-position: center;
+	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.background-jack {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("images/jack.jpg");
+	background-position: center;
+	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.background-sun_clouds {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("images/sun_clouds.jpg");
+	background-position: center;
+	background-size: cover;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.wrapper {
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 5px;
+	padding: 10px;
+	min-width: 400px;
+	position: absolute;
+	top: 15vh;
+	border: 1px solid #333232;
+
+}
+
+.header {
+	/* background-color: darkmagenta; */
+	align-items: center;
+	padding: 5xp;
+}
+
+.header>h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5px;
+}
+
+.search-form {
+	margin: 0px 10px ;
+	/* background-color: aqua; */
+	min-height: 10vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.search-bar {
+	/* background-color: blue; */
+	width: 50%;
+	border: 1px solid #333232;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5px;
+	font-size: 1rem;
+	color: #333232;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.search-button {
+	/* background-color: cornflowerblue; */
+	border: 1px solid #333232;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5px;
+	font-size: 1rem;
+	color: #333232;
+	font-family: 'Montserrat', sans-serif;
+
+}

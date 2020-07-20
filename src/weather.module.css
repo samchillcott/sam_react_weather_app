@@ -1,0 +1,33 @@
+.weather {
+    /* background-color: aqua; */
+    font-family: 'Montserrat', sans-serif;    
+    font-weight: 700;
+    font-size: 1.2 rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.temperature {
+    display: grid;
+    justify-content: center;
+    font-size: 5rem;
+    margin: 0px;
+}
+
+.weather ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    line-height: 2;
+}
