@@ -14,10 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sam_react_weather_app/precache-manifest.32040ded0ab723ff974daccbc19a5916.js"
-=======
-  "/precache-manifest.7d66364afd20b02e2705bc2981fe2918.js"
->>>>>>> cea353b130afba5bf8a918790fd2276c844c358b
+  "./precache-manifest.223baa30372ce3640004e2506f8379fd.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -36,10 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/sam_react_weather_app/index.html"), {
-=======
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/index.html"), {
->>>>>>> cea353b130afba5bf8a918790fd2276c844c358b
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("./index.html"), {
   
   blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });
