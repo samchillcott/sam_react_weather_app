@@ -22,16 +22,7 @@
 	"eslintConfig": {
 		"extends": "react-app"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/samchillcott/sam_react_weather_app.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/samchillcott/sam_react_weather_app/issues"
-	},
-	"homepage": "./",
+
 	"browserslist": {
 		"production": [
 			">0.2%",
