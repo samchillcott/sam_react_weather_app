@@ -11,7 +11,7 @@ const App = () => {
 
 	const getWeather = async () => {
 		// if query isn't an empty string then we run the code for getWeather()
-		console.log(query !== "");
+		// console.log(query !== "");
 		if (query !== "") {
 			let response = null;
 			try {
@@ -41,30 +41,21 @@ const App = () => {
 	}, [query]);
 
 	const updateSearch = (e) => {
-		// console.log("repeat");
 		setSearch(e.target.value);
 	};
 
 	const getSearch = (e) => {
 		e.preventDefault();
+		// console.log(search);
+		// setSearch(e.target.value)		
+		// console.log(search);
 		setQuery(search);
 		setSearch("");
+		console.log("get search called");
 	};
 
-	// typeof weather.main != "undefined"
-	// 	? (weather.main.temp > 20) & (weather.clouds.all < 50)
-	// 		? "background-sun"
-	// 		: (weather.main.temp < 20) & (weather.clouds.all < 50)
-	// 		? "background-nosun"
-	// 		: (weather.main.temp < 20) & (weather.clouds.all > 50)
-	// 		? "background-jack"
-	// 		: (weather.main.temp > 20) & (weather.clouds.all > 50)
-	// 		? "background-sun_clouds"
-	// 		: "App"
-	// 	: "App";
-
 	let backgroundClass = "App";
-	if (weather.main != undefined) {
+	if (weather.main !== undefined) {
 		if ((weather.main.temp > 20) & (weather.clouds.all < 50)) {
 			backgroundClass = "background-sun";
 		} else if ((weather.main.temp < 20) & (weather.clouds.all < 50)) {
@@ -78,7 +69,7 @@ const App = () => {
 
 	return (
 		<div className={backgroundClass}>
-			{console.log("grrr")}
+			{console.log("App render")}
 			<div className="wrapper">
 				<div className="header">
 					<h1 className="title">Weather App</h1>

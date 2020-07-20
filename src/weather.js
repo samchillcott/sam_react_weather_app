@@ -15,11 +15,11 @@ const Weather = ({
 }) => {
 	// convert unix to sunrise
 	const dateObj = new Date(sunrise * 1000);
-	console.log(dateObj);
+	// console.log(dateObj);
 	const utcString = dateObj.toUTCString();
-	console.log(utcString);
+	// console.log(utcString);
 	const sunriseTime = utcString.slice(-11, -4);
-	console.log(sunriseTime);
+	// console.log(sunriseTime);
 
 	// convert unix to sunset
 	const dateObj2 = new Date(sunset * 1000);
@@ -36,6 +36,8 @@ const Weather = ({
 
 	return (
 		<div className={style.weather}>
+					{console.log("weather comp render")}
+
 			<p className={style.summary}>
 				{city}, {country} - {desc}{" "}
 				<img
