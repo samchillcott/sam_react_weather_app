@@ -1,7 +1,7 @@
 # Weather App
 
 - Web app displaying weather info collected from a 3rd party API. Background changes depending on certain weather conditions using conditional styling.
-- Set as a challenge by my mentor and built not using a follow along tutorial.
+- Set as a challenge by my mentor (original spec below) and built not using a follow along tutorial.
 
 ## Tech Used
 
@@ -59,3 +59,20 @@
 
 - #100daysofcode 39-56.
 - [Daily Videos - Instagram](https://www.instagram.com/samchillcott/)
+
+## Original Spec
+
+- User types in the city and country code into a search bar, separated by a comma. Hits enter or presses a 'Search' button to confirm.
+- The app fetches weather information for that city.
+  - 1 If the request returns an error, print out an error message
+  - 2 If the request fails because the city is incorrect, inform the user of misspelling.
+  - 3 If the request correctly returns data, display:
+    - City name and country code
+    - Current temperature in Celsius
+    - Current cloudiness in %
+    - Sunrise and sunset hours today
+    - One additional information that you choose - can be anything from the response.
+- The background of the page should be:
+  - A sunny background if cloudiness is below 50% and temperature above 20\*C.
+  - A non-sunny background if cloudiness is below 50% and temperature below 20\*C.
+  - A union jack if cloudiness is above 50% and temperature below 20\*C.
