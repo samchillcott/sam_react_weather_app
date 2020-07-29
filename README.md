@@ -5,7 +5,7 @@
 
 ## Tech Used
 
-- React.js.
+- React.js (useState & useEffect).
 - Javascript.
 - Dom manipulation.
 - CSS.
