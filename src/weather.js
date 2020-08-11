@@ -15,16 +15,26 @@ const Weather = ({
 }) => {
 	// convert unix to sunrise
 	const dateObj = new Date(sunrise * 1000);
-	// console.log(dateObj);
-	const utcString = dateObj.toUTCString();
-	// console.log(utcString);
-	const sunriseTime = utcString.slice(-11, -4);
-	// console.log(sunriseTime);
+	// console.log("date obj: " + dateObj);
+	let sunriseHours = dateObj.getHours();
+	let sunriseMinutes = dateObj.getMinutes();
+	const sunriseTime = `${sunriseHours}:${sunriseMinutes}`;
+
+	// const toString = dateObj.toString();
+	// console.log("to string: " + toString);
+
+	// const sunriseTime = toString.slice(-11, -4);
+	// console.log("sunrise time: " + sunriseTime);
 
 	// convert unix to sunset
 	const dateObj2 = new Date(sunset * 1000);
-	const utcString2 = dateObj2.toUTCString();
-	const sunsetTime = utcString2.slice(-11, -4);
+	let sunsetHours = dateObj2.getHours();
+
+	let sunsetMinutes = dateObj2.getMinutes();
+	const sunsetTime = `${sunsetHours - 12}:${sunsetMinutes}`;
+
+	// const utcString2 = dateObj2.toUTCString();
+	// const sunsetTime = utcString2.slice(-11, -4);
 
 	// Convert country code to country name
 
@@ -36,7 +46,7 @@ const Weather = ({
 
 	return (
 		<div className={style.weather}>
-					{console.log("weather comp render")}
+			{console.log("weather comp render")}
 
 			<p className={style.summary}>
 				{city}, {country} - {desc}{" "}
