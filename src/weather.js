@@ -12,12 +12,22 @@ const Weather = ({
 	cloud,
 	sunrise,
 	sunset,
+	timezone,
 }) => {
 	// convert unix to sunrise
-	const dateObj = new Date(sunrise * 1000);
-	// console.log("date obj: " + dateObj);
+	console.log(sunrise);
+
+	// convert timezone
+	console.log("timezone: " + timezone);
+	const sunriseTimeZoneConversion = sunrise + timezone;
+	console.log("sunrise conversion: " + sunriseTimeZoneConversion);
+	const dateObj = new Date(sunriseTimeZoneConversion * 1000);
+
+	console.log("date obj: " + dateObj);
 	let sunriseHours = dateObj.getHours();
 	let sunriseMinutes = dateObj.getMinutes();
+	console.log(sunriseHours, sunriseMinutes);
+
 	const sunriseTime = `${sunriseHours}:${sunriseMinutes}`;
 
 	// const toString = dateObj.toString();
@@ -31,7 +41,7 @@ const Weather = ({
 	let sunsetHours = dateObj2.getHours();
 
 	let sunsetMinutes = dateObj2.getMinutes();
-	const sunsetTime = `${sunsetHours - 12}:${sunsetMinutes}`;
+	const sunsetTime = `${sunsetHours}:${sunsetMinutes}`;
 
 	// const utcString2 = dateObj2.toUTCString();
 	// const sunsetTime = utcString2.slice(-11, -4);

@@ -99,6 +99,7 @@ const App = () => {
 							cloud={weather.clouds.all}
 							sunrise={weather.sys.sunrise}
 							sunset={weather.sys.sunset}
+							timezone={weather.timezone}
 						/>
 					</div>
 				) : (
