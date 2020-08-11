@@ -1,68 +1,78 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Weather App
 
-## Available Scripts
+- Web app displaying weather info collected from a 3rd party API. Background changes depending on certain weather conditions using conditional styling.
+- Set as a challenge by my mentor (original spec below) and built not using a follow along tutorial.
 
-In the project directory, you can run:
+## Tech Used
 
-### `npm start`
+- React.js (useState & useEffect).
+- Javascript.
+- Dom manipulation.
+- CSS.
+- Open Weather 3rd Party API.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Displays weather info for requested query:
+  - City, Country,
+  - Description of weather,
+  - Weather icon,
+  - Temperature in Celsius,
+  - "Feels Like" temperature (one I use myself),
+  - Cloudiness in %,
+  - Sunrise time,
+  - Sunset time.
+- Conditional backgrounds:
+  - A sunny background if cloudiness is below 50% and temperature above 20\*C.
+  - A non-sunny background if cloudiness is below 50% and temperature below 20\*C.
+  - A sun & clouds background if cloudiness is above 50% and temperature above 20\*C.
+  - A union jack if cloudiness is above 50% and temperature below 20\*C.
 
-### `npm test`
+## What I Learned
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- How to pick the data from an API and display within a react component.
+- Using JS logic and within JSX.
+- How to debug (which enable me to iterate as i go).
 
-### `npm run build`
+## Challenges
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Doing it on my own / "taking the stabilizers off" - My first project not following a tutorial.
+- Being too scared to try things (for fear of messing code or getting it wrong which I knew would lead to frustration).
+- The psychology in general - overwhelm, mood management etc.
+- The time conversions from UTC (still incomplete).
+- Found the API the easy part.
+- Understanding what build process was doing - came back a month later and sorted/updated.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Improvements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Cover for more error cases.
+- Try things more often - don't get analysis paralysis.
+- Auto suggest in search box.
+- Sunrise and sunset times to local time (local to the city returned, not to me in the UK).
+- Upon misspelling, try to suggest a correction.
+- Create a number of 'test' pages, which are pre-set to fetch particular city's weather upon opening - or 'simulate' that the particular data already has been returned.
+- Use unsplash using query parameters for background image/temperature. So instead of having 3 variants/images saved in the src folder, I can get a rotation of images from unsplash direct.
+- Add pollen count - not available through open weather BUT could bring in another API request.
+- Call the city by ID as suggested in the docs.
 
-### `npm run eject`
+## Watch Me Build This
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- #100daysofcode 39-56.
+- [Daily Videos - Instagram](https://www.instagram.com/samchillcott/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Original Spec
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- User types in the city and country code into a search bar, separated by a comma. Hits enter or presses a 'Search' button to confirm.
+- The app fetches weather information for that city.
+  - 1 If the request returns an error, print out an error message
+  - 2 If the request fails because the city is incorrect, inform the user of misspelling.
+  - 3 If the request correctly returns data, display:
+    - City name and country code
+    - Current temperature in Celsius
+    - Current cloudiness in %
+    - Sunrise and sunset hours today
+    - One additional information that you choose - can be anything from the response.
+- The background of the page should be:
+  - A sunny background if cloudiness is below 50% and temperature above 20\*C.
+  - A non-sunny background if cloudiness is below 50% and temperature below 20\*C.
+  - A union jack if cloudiness is above 50% and temperature below 20\*C.
