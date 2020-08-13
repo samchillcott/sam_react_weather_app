@@ -1,7 +1,10 @@
 import React from "react";
 import style from "./weather.module.css";
 import isoCountries from "./countries.js";
-var fromUnixTime = require('date-fns/fromUnixTime');
+// import { fromUnixTime } from 'date-fns';
+// var fromUnixTime = require('date-fns/fromUnixTime');
+import moment from 'moment';
+
 
 const Weather = ({
 	city,
@@ -23,7 +26,13 @@ const Weather = ({
 	const sunriseTimeZoneConversion = sunrise + timezone;
 	console.log("sunrise conversion: " + sunriseTimeZoneConversion);
 
-	let dateAfterConversion = fromUnixTime(sunriseTimeZoneConversion);
+	// let dateAfterConversion = fromUnixTime(sunrise);
+	let dateAfterConversion = moment(sunriseTimeZoneConversion);
+
+	// var day = moment(1318781876406);
+
+
+	console.log("date after conversion" + dateAfterConversion);
 
 	let sunriseHours = dateAfterConversion.getHours();
 	let sunriseMinutes = dateAfterConversion.getMinutes();
