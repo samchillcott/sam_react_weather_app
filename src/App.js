@@ -27,7 +27,7 @@ const App = () => {
 				if (response.ok) {
 					const data = await response.json();
 					setWeather(data);
-					console.log(data);
+					// console.log(data);
 				} else {
 					alert("City not in database / Check your spelling");
 				}

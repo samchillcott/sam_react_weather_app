@@ -27,15 +27,20 @@ const Weather = ({
 	console.log("sunrise conversion: " + sunriseTimeZoneConversion);
 
 	// let dateAfterConversion = fromUnixTime(sunrise);
-	let dateAfterConversion = moment(sunriseTimeZoneConversion);
+	let dateAfterConversion = moment.unix(sunriseTimeZoneConversion).utc();
+	// let dateAfterConversion = moment.unix(sunriseTimeZoneConversion).utc().format();
+	// let dateAfterConversion = moment.unix(sunrise).format();
 
 	// var day = moment(1318781876406);
 
 
-	console.log("date after conversion" + dateAfterConversion);
+	console.log("date after conversion: " + dateAfterConversion);
 
-	let sunriseHours = dateAfterConversion.getHours();
-	let sunriseMinutes = dateAfterConversion.getMinutes();
+	// let sunriseHours = dateAfterConversion.getHours();
+	let sunriseHours = moment(dateAfterConversion).hour();
+	// let sunriseHours = dateAfterConversion.hour;
+	let sunriseMinutes = moment(dateAfterConversion).minute();
+	// let sunriseMinutes = dateAfterConversion.getMinutes();
 
 
 	// const dateObj = new Date(sunriseTimeZoneConversion * 1000);
