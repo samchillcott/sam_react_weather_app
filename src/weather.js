@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./weather.module.css";
 import isoCountries from "./countries.js";
+var fromUnixTime = require('date-fns/fromUnixTime');
 
 const Weather = ({
 	city,
@@ -21,12 +22,19 @@ const Weather = ({
 	console.log("timezone: " + timezone);
 	const sunriseTimeZoneConversion = sunrise + timezone;
 	console.log("sunrise conversion: " + sunriseTimeZoneConversion);
-	const dateObj = new Date(sunriseTimeZoneConversion * 1000);
 
-	console.log("date obj: " + dateObj);
-	let sunriseHours = dateObj.getHours();
-	let sunriseMinutes = dateObj.getMinutes();
-	console.log(sunriseHours, sunriseMinutes);
+	let dateAfterConversion = fromUnixTime(sunriseTimeZoneConversion);
+
+	let sunriseHours = dateAfterConversion.getHours();
+	let sunriseMinutes = dateAfterConversion.getMinutes();
+
+
+	// const dateObj = new Date(sunriseTimeZoneConversion * 1000);
+
+	// console.log("date obj: " + dateObj);
+	// let sunriseHours = dateObj.getHours();
+	// let sunriseMinutes = dateObj.getMinutes();
+	// console.log(sunriseHours, sunriseMinutes);
 
 	const sunriseTime = `${sunriseHours}:${sunriseMinutes}`;
 
