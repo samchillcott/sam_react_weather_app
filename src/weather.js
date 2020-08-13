@@ -1,10 +1,7 @@
 import React from "react";
 import style from "./weather.module.css";
 import isoCountries from "./countries.js";
-// import { fromUnixTime } from 'date-fns';
-// var fromUnixTime = require('date-fns/fromUnixTime');
-import moment from 'moment';
-
+import moment from "moment";
 
 const Weather = ({
 	city,
@@ -19,54 +16,34 @@ const Weather = ({
 	timezone,
 }) => {
 	// convert unix to sunrise
-	console.log(sunrise);
+	// console.log(sunrise);
 
 	// convert timezone
-	console.log("timezone: " + timezone);
+	// console.log("timezone: " + timezone);
 	const sunriseTimeZoneConversion = sunrise + timezone;
-	console.log("sunrise conversion: " + sunriseTimeZoneConversion);
+	// console.log("sunrise conversion: " + sunriseTimeZoneConversion);
 
-	// let dateAfterConversion = fromUnixTime(sunrise);
 	let dateAfterConversion = moment.unix(sunriseTimeZoneConversion).utc();
-	// let dateAfterConversion = moment.unix(sunriseTimeZoneConversion).utc().format();
-	// let dateAfterConversion = moment.unix(sunrise).format();
 
-	// var day = moment(1318781876406);
+	// console.log("date after conversion: " + dateAfterConversion);
 
-
-	console.log("date after conversion: " + dateAfterConversion);
-
-	// let sunriseHours = dateAfterConversion.getHours();
 	let sunriseHours = moment(dateAfterConversion).hour();
-	// let sunriseHours = dateAfterConversion.hour;
 	let sunriseMinutes = moment(dateAfterConversion).minute();
-	// let sunriseMinutes = dateAfterConversion.getMinutes();
-
-
-	// const dateObj = new Date(sunriseTimeZoneConversion * 1000);
-
-	// console.log("date obj: " + dateObj);
-	// let sunriseHours = dateObj.getHours();
-	// let sunriseMinutes = dateObj.getMinutes();
-	// console.log(sunriseHours, sunriseMinutes);
-
 	const sunriseTime = `${sunriseHours}:${sunriseMinutes}`;
 
-	// const toString = dateObj.toString();
-	// console.log("to string: " + toString);
-
-	// const sunriseTime = toString.slice(-11, -4);
-	// console.log("sunrise time: " + sunriseTime);
-
 	// convert unix to sunset
-	const dateObj2 = new Date(sunset * 1000);
-	let sunsetHours = dateObj2.getHours();
 
-	let sunsetMinutes = dateObj2.getMinutes();
+	const sunsetTimeZoneConversion = sunset + timezone;
+	console.log("sunset conversion: " + sunsetTimeZoneConversion);
+
+	let dateAfterSunsetConversion = moment.unix(sunsetTimeZoneConversion).utc();
+
+	console.log("date after conversion: " + dateAfterSunsetConversion);
+
+	let sunsetHours = moment(dateAfterSunsetConversion).hour();
+	let sunsetMinutes = moment(dateAfterSunsetConversion).minutes();
+	console.log(sunsetMinutes);
 	const sunsetTime = `${sunsetHours}:${sunsetMinutes}`;
-
-	// const utcString2 = dateObj2.toUTCString();
-	// const sunsetTime = utcString2.slice(-11, -4);
 
 	// Convert country code to country name
 
@@ -92,8 +69,8 @@ const Weather = ({
 			<ul className="minor_data">
 				<li>(Feels like {({ feel } = Math.round(feel))}°c)</li>
 				<li>Cloudiness {cloud}%</li>
-				<li>Sunrise {sunriseTime} AM</li>
-				<li>Sunset {sunsetTime} PM</li>
+				<li>Sunrise {sunriseTime} </li>
+				<li>Sunset {sunsetTime} </li>
 			</ul>
 		</div>
 	);
