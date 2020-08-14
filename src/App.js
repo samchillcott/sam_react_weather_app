@@ -27,7 +27,7 @@ const App = () => {
 				if (response.ok) {
 					const data = await response.json();
 					setWeather(data);
-					console.log(data);
+					// console.log(data);
 				} else {
 					alert("City not in database / Check your spelling");
 				}
@@ -99,6 +99,7 @@ const App = () => {
 							cloud={weather.clouds.all}
 							sunrise={weather.sys.sunrise}
 							sunset={weather.sys.sunset}
+							timezone={weather.timezone}
 						/>
 					</div>
 				) : (

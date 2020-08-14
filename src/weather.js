@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./weather.module.css";
 import isoCountries from "./countries.js";
+import moment from "moment";
 
 const Weather = ({
 	city,
@@ -12,19 +13,46 @@ const Weather = ({
 	cloud,
 	sunrise,
 	sunset,
+	timezone,
 }) => {
 	// convert unix to sunrise
-	const dateObj = new Date(sunrise * 1000);
-	// console.log(dateObj);
-	const utcString = dateObj.toUTCString();
-	// console.log(utcString);
-	const sunriseTime = utcString.slice(-11, -4);
-	// console.log(sunriseTime);
+	// console.log(sunrise);
+
+	// convert timezone
+	// console.log("timezone: " + timezone);
+	const sunriseTimeZoneConversion = sunrise + timezone;
+	// console.log("sunrise conversion: " + sunriseTimeZoneConversion);
+
+	let dateAfterConversion = moment.unix(sunriseTimeZoneConversion).utc();
+
+	// console.log("date after conversion: " + dateAfterConversion);
+
+	let sunriseHours = moment(dateAfterConversion).hour();
+	let sunriseMinutes =
+		(moment(dateAfterConversion).minute() < 10 ? "0" : "") +
+		moment(dateAfterConversion).minute();
+	const sunriseTime = `${sunriseHours}:${sunriseMinutes}`;
 
 	// convert unix to sunset
-	const dateObj2 = new Date(sunset * 1000);
-	const utcString2 = dateObj2.toUTCString();
-	const sunsetTime = utcString2.slice(-11, -4);
+
+	const sunsetTimeZoneConversion = sunset + timezone;
+	console.log("sunset conversion: " + sunsetTimeZoneConversion);
+
+	let dateAfterSunsetConversion = moment
+		.unix(sunsetTimeZoneConversion)
+		.utc()
+		.format();
+
+	console.log("string after sunset conversion: " + dateAfterSunsetConversion);
+
+	let sunsetHours = moment(dateAfterSunsetConversion).hour();
+	let sunsetMinutes =
+		(moment(dateAfterSunsetConversion).minutes() < 10 ? "0" : "") +
+		moment(dateAfterSunsetConversion).minutes();
+
+	console.log("sunset minutes: " + sunsetMinutes);
+
+	const sunsetTime = `${sunsetHours}:${sunsetMinutes}`;
 
 	// Convert country code to country name
 
@@ -36,7 +64,7 @@ const Weather = ({
 
 	return (
 		<div className={style.weather}>
-					{console.log("weather comp render")}
+			{console.log("weather comp render")}
 
 			<p className={style.summary}>
 				{city}, {country} - {desc}{" "}
@@ -50,8 +78,8 @@ const Weather = ({
 			<ul className="minor_data">
 				<li>(Feels like {({ feel } = Math.round(feel))}°c)</li>
 				<li>Cloudiness {cloud}%</li>
-				<li>Sunrise {sunriseTime} AM</li>
-				<li>Sunset {sunsetTime} PM</li>
+				<li>Sunrise {sunriseTime} </li>
+				<li>Sunset {sunsetTime} </li>
 			</ul>
 		</div>
 	);
