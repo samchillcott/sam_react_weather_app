@@ -28,7 +28,7 @@ const Weather = ({
 	// console.log("date after conversion: " + dateAfterConversion);
 
 	let sunriseHours = moment(dateAfterConversion).hour();
-	let sunriseMinutes = moment(dateAfterConversion).minute();
+	let sunriseMinutes = (moment(dateAfterConversion).minute()< 10 ? "0" : "") + moment(dateAfterConversion).minute() ;
 	const sunriseTime = `${sunriseHours}:${sunriseMinutes}`;
 
 	// convert unix to sunset
@@ -36,14 +36,25 @@ const Weather = ({
 	const sunsetTimeZoneConversion = sunset + timezone;
 	console.log("sunset conversion: " + sunsetTimeZoneConversion);
 
-	let dateAfterSunsetConversion = moment.unix(sunsetTimeZoneConversion).utc();
+	let dateAfterSunsetConversion = moment
+		.unix(sunsetTimeZoneConversion)
+		.utc()
+		.format();
 
-	console.log("date after conversion: " + dateAfterSunsetConversion);
+	console.log("string after sunset conversion: " + dateAfterSunsetConversion);
 
 	let sunsetHours = moment(dateAfterSunsetConversion).hour();
-	let sunsetMinutes = moment(dateAfterSunsetConversion).minutes();
-	console.log(sunsetMinutes);
+	// let sunsetMinutes = moment(dateAfterSunsetConversion).minutes();
+	let sunsetMinutes =
+		(moment(dateAfterSunsetConversion).minutes() < 10 ? "0" : "") +
+		moment(dateAfterSunsetConversion).minutes();
+
+	// (date.getMinutes()<10?'0':'') + date.getMinutes()
+
+	console.log("sunset minutes: " + sunsetMinutes);
+
 	const sunsetTime = `${sunsetHours}:${sunsetMinutes}`;
+	// const sunsetTime = dateAfterSunsetConversion;
 
 	// Convert country code to country name
 
