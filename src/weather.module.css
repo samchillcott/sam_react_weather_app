@@ -14,12 +14,19 @@
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
+    /* background-color: yellow; */
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+img {
+    width: 100px;
 }
 
 .temperature {
     display: grid;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin: 0px;
 }
 
@@ -27,7 +34,79 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;
+    /* justify-content: center; */
+    /* padding-left: 100px; */
     line-height: 2;
+    /* background-color: lightblue; */
+    text-align: center;
 }
+
+.weather li {
+    justify-content: center;
+    /* background-color: rgb(224, 156, 238); */
+    display: inline-block;
+ 
+}
+
+/* Media Queries */
+
+@media (min-width: 48em) {
+
+    .summary {
+        font-size: 1.5rem;
+    }
+
+	.temperature {
+        font-size: 7rem;
+    }
+
+    .weather li{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 62em) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .summary {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 200px;
+    }
+
+	.temperature {
+        font-size: 8rem;
+    }
+
+    .weather li{
+        font-size: 1.5rem;
+    }
+} 
+
+@media (min-width: 82em) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .summary {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 250px;
+    }
+
+	.temperature {
+        font-size: 15rem;
+    }
+
+    .weather li{
+        font-size: 2.5rem;
+    }
+} 
