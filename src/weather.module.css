@@ -14,12 +14,13 @@
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
+    background-color: yellow;
 }
 
 .temperature {
     display: grid;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0px;
 }
 
@@ -28,8 +29,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 100px;
+    /* padding-left: 100px; */
     line-height: 2;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.weather li {
+    justify-content: center;
+    background-color: rgb(224, 156, 238);
+    display: inline-block;
+ 
 }
 
 /* Media Queries */

@@ -79,17 +79,18 @@ a {
 	background: rgba(255, 255, 255, 0.6);
 	border-radius: 5px;
 	padding: 10px;
-	min-width: 400px;
+	/* min-width: 400px; */
+	width: 90%;
 	position: absolute;
-	top: 15vh;
+	top: 10vh;
 	border: 1px solid #333232;
 
 }
 
 .header {
-	/* background-color: darkmagenta; */
+	background-color: darkmagenta;
 	align-items: center;
-	padding: 5xp;
+	/* padding: 5px; */
 }
 
 .header>h1 {
