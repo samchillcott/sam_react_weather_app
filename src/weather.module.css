@@ -20,7 +20,7 @@
 .temperature {
     display: grid;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin: 0px;
 }
 
@@ -28,7 +28,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     /* padding-left: 100px; */
     line-height: 2;
     background-color: lightblue;
