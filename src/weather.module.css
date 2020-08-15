@@ -61,12 +61,16 @@
 
 @media (min-width: 62em) {
 
-    .header {
-        font-size: 3rem;
+    h1 {
+        font-size: 4rem;
     }
 
-    .weather_summary p {
-        font-size: 1.5rem;
+    .summary {
+        font-size: 2rem;
+    }
+
+    icon {
+        font-size: 4rem;
     }
 
 	.temperature {
