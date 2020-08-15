@@ -29,6 +29,7 @@
   - A non-sunny background if cloudiness is below 50% and temperature below 20\*C.
   - A sun & clouds background if cloudiness is above 50% and temperature above 20\*C.
   - A union jack if cloudiness is above 50% and temperature below 20\*C.
+- Responsive design.
 
 ## What I Learned
 
