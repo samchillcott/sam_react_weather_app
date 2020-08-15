@@ -7,8 +7,10 @@
 
 - React.js (useState & useEffect).
 - Javascript.
+- Moment.js library.
 - Dom manipulation.
 - CSS.
+- Responsive Design.
 - Open Weather 3rd Party API.
 
 ## Features
@@ -33,6 +35,8 @@
 - How to pick the data from an API and display within a react component.
 - Using JS logic and within JSX.
 - How to debug (which enable me to iterate as i go).
+- Working with times and timezones and using date-fns & moment.js libraries.
+- Modern mobile responsive techniques - Start mobile first in the next project.
 
 ## Challenges
 
@@ -42,6 +46,8 @@
 - The time conversions from UTC (still incomplete).
 - Found the API the easy part.
 - Understanding what build process was doing - came back a month later and sorted/updated.
+- Working with date objects/time zones and daylight savings. The Unix conversions were correct but the objects were reverting to UTC which I didn’t want. Tried date-fns but got it working with moment.js.
+- GitHubPages deployment - run build then run deploy to update the GHP branch.
 
 ## Improvements
 
@@ -58,6 +64,7 @@
 ## Watch Me Build This
 
 - #100daysofcode 39-56.
+- #daysofcode 11-15/8/20.
 - [Daily Videos - Instagram](https://www.instagram.com/samchillcott/)
 
 ## Original Spec
