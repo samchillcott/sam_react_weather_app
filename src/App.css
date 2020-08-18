@@ -144,7 +144,7 @@ a {
 	}
 }
 
-@media (min-width: 62em) {
+@media (min-width: 64em) {
 	.wrapper {
 		width: 60%;
 	}

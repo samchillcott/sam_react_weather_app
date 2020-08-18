@@ -57,7 +57,7 @@ img {
     }
 
 	.temperature {
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .weather li{
@@ -65,48 +65,48 @@ img {
     }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 64em) {
 
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .summary {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    img {
-        width: 200px;
-    }
+    /* img {
+        width: 100x;
+    } */
 
 	.temperature {
-        font-size: 8rem;
+        font-size: 6rem;
     }
 
     .weather li{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 } 
 
 @media (min-width: 82em) {
 
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .summary {
         font-size: 2rem;
     }
 
-    img {
+    /* img {
         width: 250px;
-    }
+    } */
 
 	.temperature {
-        font-size: 15rem;
+        font-size: 6rem;
     }
 
     .weather li{
-        font-size: 2.5rem;
+        font-size: 1rem;
     }
 } 
