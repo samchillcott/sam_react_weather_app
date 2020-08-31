@@ -61,6 +61,7 @@
 - Use unsplash using query parameters for background image/temperature. So instead of having 3 variants/images saved in the src folder, I can get a rotation of images from unsplash direct.
 - Add pollen count - not available through open weather BUT could bring in another API request.
 - Call the city by ID as suggested in the docs.
+- Refactor using SOLID principles.
 
 ## Watch Me Build This
 
