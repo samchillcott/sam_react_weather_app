@@ -1,112 +1,98 @@
 .weather {
-    /* background-color: aqua; */
-    font-family: 'Montserrat', sans-serif;    
-    font-weight: 700;
-    font-size: 1.2 rem;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	/* background-color: aqua; */
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-size: 1.2 rem;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .summary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    /* background-color: yellow; */
-    font-size: 1rem;
-    margin-bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	/* background-color: yellow; */
+	font-size: 1rem;
+	margin-bottom: 0;
 }
 
 img {
-    width: 100px;
+	width: 100px;
 }
 
 .temperature {
-    display: grid;
-    justify-content: center;
-    font-size: 4.5rem;
-    margin: 0px;
+	display: grid;
+	justify-content: center;
+	font-size: 4.5rem;
+	margin: 0px;
 }
 
 .weather ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* padding-left: 100px; */
-    line-height: 2;
-    /* background-color: lightblue; */
-    text-align: center;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	line-height: 2;
+	/* background-color: lightblue; */
+	text-align: center;
 }
 
 .weather li {
-    justify-content: center;
-    /* background-color: rgb(224, 156, 238); */
-    display: inline-block;
- 
+	justify-content: center;
+	/* background-color: rgb(224, 156, 238); */
+	display: inline-block;
 }
 
 /* Media Queries */
 
 @media (min-width: 48em) {
-
-    .summary {
-        font-size: 1.5rem;
-    }
+	.summary {
+		font-size: 1.5rem;
+	}
 
 	.temperature {
-        font-size: 6rem;
-    }
+		font-size: 6rem;
+	}
 
-    .weather li{
-        font-size: 1.5rem;
-    }
+	.weather li {
+		font-size: 1.5rem;
+	}
 }
 
 @media (min-width: 64em) {
+	h1 {
+		font-size: 3rem;
+	}
 
-    h1 {
-        font-size: 3rem;
-    }
-
-    .summary {
-        font-size: 1.8rem;
-    }
-
-    /* img {
-        width: 100x;
-    } */
+	.summary {
+		font-size: 1.8rem;
+	}
 
 	.temperature {
-        font-size: 6rem;
-    }
+		font-size: 6rem;
+	}
 
-    .weather li{
-        font-size: 1.5rem;
-    }
-} 
+	.weather li {
+		font-size: 1.5rem;
+	}
+}
 
 @media (min-width: 82em) {
+	h1 {
+		font-size: 3rem;
+	}
 
-    h1 {
-        font-size: 3rem;
-    }
-
-    .summary {
-        font-size: 2rem;
-    }
-
-    /* img {
-        width: 250px;
-    } */
+	.summary {
+		font-size: 2rem;
+	}
 
 	.temperature {
-        font-size: 6rem;
-    }
+		font-size: 6rem;
+	}
 
-    .weather li{
-        font-size: 1.5rem;
-    }
-} 
+	.weather li {
+		font-size: 1.5rem;
+	}
+}

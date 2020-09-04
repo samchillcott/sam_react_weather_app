@@ -16,15 +16,11 @@ const Weather = ({
 	timezone,
 }) => {
 	// convert unix to sunrise
-	// console.log(sunrise);
 
-	// convert timezone
-	// console.log("timezone: " + timezone);
 	const sunriseTimeZoneConversion = sunrise + timezone;
 	// console.log("sunrise conversion: " + sunriseTimeZoneConversion);
 
 	let dateAfterConversion = moment.unix(sunriseTimeZoneConversion).utc();
-
 	// console.log("date after conversion: " + dateAfterConversion);
 
 	let sunriseHours = moment(dateAfterConversion).hour();

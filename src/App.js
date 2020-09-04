@@ -27,7 +27,7 @@ const App = () => {
 				if (response.ok) {
 					const data = await response.json();
 					setWeather(data);
-					// console.log(data);
+					console.log(data);
 				} else {
 					alert("City not in database / Check your spelling");
 				}
@@ -46,12 +46,8 @@ const App = () => {
 
 	const getSearch = (e) => {
 		e.preventDefault();
-		// console.log(search);
-		// setSearch(e.target.value)		
-		// console.log(search);
 		setQuery(search);
 		setSearch("");
-		console.log("get search called");
 	};
 
 	let backgroundClass = "App";
@@ -69,7 +65,6 @@ const App = () => {
 
 	return (
 		<div className={backgroundClass}>
-			{console.log("App render")}
 			<div className="wrapper">
 				<div className="header">
 					<h1 className="title">Weather App</h1>
