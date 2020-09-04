@@ -3,6 +3,20 @@ import style from "./weather.module.css";
 import isoCountries from "./countries.js";
 import moment from "moment";
 
+/**
+ * Weather view displaying teh retrieved data from Open Weather API/App component.
+ *     Some console logs have been left for debugging on purpose for convenience of reviewers.
+ * @param  {string} city
+ * @param  {number} code
+ * @param  {img} icon
+ * @param  {string} desc
+ * @param  {number} temp
+ * @param  {number} feel
+ * @param  {number} cloud
+ * @param  {number} sunrise
+ * @param  {number} sunset
+ * @param  {number} timezone
+ */
 const Weather = ({
 	city,
 	code,
@@ -16,7 +30,6 @@ const Weather = ({
 	timezone,
 }) => {
 	// convert unix to sunrise
-
 	const sunriseTimeZoneConversion = sunrise + timezone;
 	// console.log("sunrise conversion: " + sunriseTimeZoneConversion);
 
@@ -30,7 +43,6 @@ const Weather = ({
 	const sunriseTime = `${sunriseHours}:${sunriseMinutes}`;
 
 	// convert unix to sunset
-
 	const sunsetTimeZoneConversion = sunset + timezone;
 	console.log("sunset conversion: " + sunsetTimeZoneConversion);
 
@@ -51,7 +63,6 @@ const Weather = ({
 	const sunsetTime = `${sunsetHours}:${sunsetMinutes}`;
 
 	// Convert country code to country name
-
 	const countryName = () => {
 		return isoCountries[code].name;
 	};

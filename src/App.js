@@ -8,10 +8,12 @@ const App = () => {
 	const [weather, setWeather] = useState([]);
 	const [search, setSearch] = useState("");
 	const [query, setQuery] = useState("");
-
+	/**
+	 * Function that collects the user input (query), request from Open Weather API then renders the view
+	 *     for that city. Also handles errors if query is empty or city isn't found in the databse
+	 */
 	const getWeather = async () => {
 		// if query isn't an empty string then we run the code for getWeather()
-		// console.log(query !== "");
 		if (query !== "") {
 			let response = null;
 			try {
@@ -34,7 +36,7 @@ const App = () => {
 			}
 		}
 	};
-
+	
 	useEffect(() => {
 		getWeather();
 		// eslint-disable-next-line
@@ -50,6 +52,8 @@ const App = () => {
 		setSearch("");
 	};
 
+	// Conditional background styling
+	
 	let backgroundClass = "App";
 	if (weather.main !== undefined) {
 		if ((weather.main.temp > 20) & (weather.clouds.all < 50)) {
