@@ -4,7 +4,7 @@ import isoCountries from "./countries.js";
 import moment from "moment";
 
 /**
- * Weather view displaying teh retrieved data from Open Weather API/App component.
+ * Weather view displaying the retrieved data from Open Weather API/App component.
  *     Some console logs have been left for debugging on purpose for convenience of reviewers.
  * @param  {string} city
  * @param  {number} code
