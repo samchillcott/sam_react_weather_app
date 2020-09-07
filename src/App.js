@@ -10,7 +10,7 @@ const App = () => {
 	const [query, setQuery] = useState("");
 	/**
 	 * Function that collects the user input (query), request from Open Weather API then renders the view
-	 *     for that city. Also handles errors if query is empty or city isn't found in the databse
+	 *     for that city. Also handles errors if query is empty or city isn't found in the database
 	 */
 	const getWeather = async () => {
 		// if query isn't an empty string then we run the code for getWeather()
